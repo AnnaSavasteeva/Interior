@@ -1,0 +1,19 @@
+.link-explore-all {
+    position: relative;
+    padding-right: 30px;
+    color: $color_21;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    text-decoration: none;
+    transition: $transition-duration;
+
+    &:hover::after {
+        font-family: 'Font Awesome\ 5 Free';
+        content: '\f054';
+        position: absolute;
+        top: 2px;
+        right: 0;
+    }
+}

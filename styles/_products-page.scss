@@ -1,0 +1,19 @@
+.products-catalog-container {
+    @include padding-horizontal();
+    @include padding-vertical(70px, 120px);
+}
+
+.products-catalog-items-container {
+    @include flex-justify-space-between();
+    flex-wrap: wrap;
+    padding: 50px 0 41px;
+}
+
+.products-catalog-item {
+    @include flex-basis-height(370px);
+    margin-bottom: 30px;
+}
+
+.products-catalog-image {
+    width: 100%;
+}

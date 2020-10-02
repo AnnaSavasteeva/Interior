@@ -1,0 +1,30 @@
+.trending-products-container {
+    @include padding-horizontal();
+    @include padding-vertical();
+}
+
+// Text
+.trending-products-text-container {
+    @include flex-justify-space-between();
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.trending-products-title {
+    @include h2-product-title();
+}
+
+// Products
+.trending-products-items-container {
+    @include flex-justify-space-between();
+    flex-wrap: wrap;
+}
+
+.trending-products-item {
+    @include flex-basis-height(370px);
+    margin-bottom: 30px;
+}
+
+.trending-product-image {
+    width: 100%;
+}

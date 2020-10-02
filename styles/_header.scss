@@ -1,0 +1,35 @@
+.header-container,
+.header-product-details-container {
+    @include flex-justify-space-between(column);
+    @include padding-horizontal();
+    @include padding-page-top();
+}
+
+.header-container {
+    padding-bottom: 50px;
+    min-height: 360px;
+    background-color: $color_f5;
+}
+
+.header-product-details-container {
+    padding-bottom: 29px;
+}
+
+.header-logo-menu-container {
+    @include flex-justify-space-between();
+    align-items: center;
+}
+
+
+
+// Page titles
+.page-title {
+    @include h1-page-title();
+}
+
+.main-page-title {
+    @include h1-page-title(45px, 700);
+    text-transform: uppercase;
+    margin-bottom: 165px;
+    margin-top: 20px;
+}

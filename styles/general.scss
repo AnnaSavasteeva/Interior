@@ -1,0 +1,64 @@
+@import 'variables_mixins';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-content-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+
+// Header
+@import 'header';
+@import 'menu';
+
+
+// Footer
+@import 'footer';
+
+
+// General blocks
+@import 'slider';
+@import 'choose-product';
+@import 'promo-products';
+
+
+// Special links
+@import 'link-show-details';
+@import 'link-explore-all';
+
+
+// Main page
+@import 'featured-products';
+@import 'trending-products';
+@import 'exclusive-products';
+@import 'mobile-app';
+
+
+// Catalog
+@import 'products-page';
+@import 'loader-icon';
+
+
+// Product details page
+@import 'product-details-page';
+
+
+// Contact
+@import 'contact-page';

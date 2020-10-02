@@ -1,0 +1,53 @@
+.contacts-container {
+    @include padding-horizontal();
+    @include padding-vertical(70px, 120px);
+    @include flex-justify-space-between();
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-item-container {
+    flex-basis: 370px;
+    min-height: 370px;
+    padding: 45px;
+    border: 1px solid $color_9c;
+    background-color: rgba(255, 255, 255, .9);
+    font-style: normal;
+    text-align: center;
+}
+
+.contact-nav-icon {
+    font-size: 48px;
+    color: $color_21;
+    margin-bottom: 20px;
+}
+
+.contact-place-title {
+    @include h2-product-title(22px);
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.contact-details-title,
+.contact-details-phone,
+.contact-details-email,
+.contact-details-address {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.contact-details-title,
+.contact-details-address {
+    color: $color_6c;
+}
+
+.contact-details-phone,
+.contact-details-email {
+    color: $color_21;
+    margin-bottom: 17px;
+}
+
+.contact-details-address {
+    font-weight: 400;
+}

@@ -1,0 +1,28 @@
+.link-show-details {
+    position: relative;
+    display: inline-block;
+    min-width: 212px;
+    height: 45px;
+    line-height: 45px; /* = высоте блока для вертикального центрирования */
+    padding: 0 50px;
+    border-radius: 23px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    text-decoration: none;
+    color: $color_21;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    transition: $transition-duration;
+
+    &:hover::after {
+        @include link-arrow();
+        right: 25px;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}

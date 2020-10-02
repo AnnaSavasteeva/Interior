@@ -1,0 +1,162 @@
+.footer-container {
+    @include padding-horizontal();
+    @include padding-vertical(120px, 30px);
+    background-color: $color_f7;
+}
+
+.footer-contacts-info-container,
+.footer-copy-socials-container {
+    @include flex-justify-space-between();
+    flex-wrap: wrap;
+}
+
+.footer-contacts-info-container {
+    align-items: flex-start;
+    margin-bottom: 55px;
+}
+
+.footer-copy-socials-container {
+    align-items: center;
+}
+
+
+
+// Address
+.footer-address-container {
+    flex-basis: 225px;
+}
+
+.footer-address-title {
+    @include footer-titles();
+    
+}
+
+.footer-address-text {
+    @include footer-text();
+}
+
+
+
+// Useful info
+.footer-useful-info-container {
+    flex-basis: 422px;
+}
+
+.footer-useful-info-title {
+    @include footer-titles();
+    
+}
+
+.footer-useful-info-links-container {
+    @include flex-justify-space-between();
+}
+
+.footer-useful-info-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-useful-info-link {
+    @include footer-links(14px);
+    letter-spacing: 0.7px;
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+// Subscribe
+.footer-subscription-container {
+ flex-basis: 370px;
+}
+
+.footer-subscription-title {
+    @include footer-titles();
+}
+
+.footer-subscription-text {
+    @include footer-text();
+}
+
+.footer-subscription-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.footer-subscription-input {
+    @include btn-input();
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 17px;
+    padding-right: 42px;
+    border: 1px solid #d9dee1;
+    border-radius: 1px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color_6c;
+
+    &:focus {
+        border-color: $color_21;
+        transition: .25s;
+    }
+}
+
+.button-send-email {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 48px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+    color: $color_21;
+    transition: .25s;
+    cursor: $cursor;
+
+    &:hover {
+        color: $color_8c;
+    }
+}
+
+
+
+// Copyright
+.footer-copyright {
+    color: $color_6c;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+
+
+// Social networks
+.footer-social-networks-container {
+    @include flex();
+    align-items: center;
+}
+
+.footer-social-networks-icon {
+    @include footer-links(28px);
+    margin: 0 6px;
+}
+
+
+
+// Terms & privacy
+.footer-terms-privacy-link {
+    @include footer-links(12px);
+    line-height: 26px;
+    letter-spacing: 0.6px;
+}

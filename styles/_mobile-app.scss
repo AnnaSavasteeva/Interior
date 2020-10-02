@@ -1,0 +1,38 @@
+.mobile-app-container {
+    @include flex-justify-center();
+    min-height: 516px;
+    @include padding-horizontal();
+    background: url(../img/mobile-app-img.jpg) center / cover no-repeat;
+}
+
+.mobile-app-promo-title {
+    @include promo-title($color_6c);
+}
+
+.mobile-app-title {
+    @include h2-product-title(62px);
+    font-weight: 200;
+    text-transform: uppercase;
+    max-width: 480px;
+    margin-bottom: 10px;
+}
+
+.mobile-app-description {
+    @include product-description();
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 33px;
+}
+
+.links-to-application-stores-container {
+    @include flex();
+}
+
+.link-to-application-store {
+    margin-right: 10px;
+    text-decoration: none;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

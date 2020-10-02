@@ -1,0 +1,58 @@
+.header-menu-list > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.header-menu-link {
+    @include menu-items();
+}
+
+.header-menu-link-active {
+    font-weight: 700;
+    color: $color_21;
+
+    &:hover {
+        cursor: $cursor-not-active;
+
+        &::after {
+            width: 0;
+        }
+    }
+}
+
+.header-menu-login,
+.header-menu-cart {
+    @include menu-links();
+    font-weight: 400;
+    color: $color_21;
+
+    &::before {
+        font-family: 'Font Awesome\ 5 Free';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        font-weight: 700;
+    }
+
+    &:hover::before {
+        color: $color_6c;
+    }
+}
+
+.header-menu-login {
+    padding-left: 20px;
+    margin-left: 30px;
+
+    &::before {
+        content: '\f007';
+    }
+}
+
+.header-menu-cart {
+    padding-left: 25px;
+    margin-left: 20px;
+
+    &::before {
+        content: '\f07a';
+    }
+}

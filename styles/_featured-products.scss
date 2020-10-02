@@ -1,0 +1,62 @@
+.featured-products-container {
+    min-height: 609px;
+    @include padding-horizontal();
+    @include padding-vertical(112px, 120px);
+}
+
+.featured-products {
+    @include flex-justify-space-between();
+    flex-wrap: wrap;
+}
+
+.featured-product {
+    position: relative;
+    @include flex-basis-height(270px);
+    @include flex-justify-center(row);
+    cursor: $cursor;
+}
+
+.featured-product-image {
+    flex-basis: 270px;
+    margin: auto;
+}
+
+.featured-product-hover {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 270px;
+    padding: 28px;
+    border: 1px solid $color_9c;
+    background-color: rgba(255, 255, 255, 0.9);
+    @include flex-justify-center();
+    align-items: center;
+    display: none;
+}
+
+.featured-product:hover .featured-product-hover {
+    @include flex();
+}
+
+.featured-product-hover-link {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 19px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    border-radius: 50%;
+    background: url(../img/arrow.svg) center / 12px no-repeat #ffffff;
+    cursor: $cursor;
+}
+
+.featured-product-hover-title {
+    @include h2-product-title(22px);
+    margin-bottom: 12px;
+}
+
+.featured-product-hover-description {
+    @include product-description();
+    text-align: center;
+    line-height: 22px;
+}

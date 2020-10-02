@@ -1,0 +1,217 @@
+// Colors
+$color_21: #212121;
+$color_6c: #6c6c6c;
+$color_8c: #8c8c8c;
+$color_9c: #9c9c9c;
+$color_f7: #f7f7f7;
+$color_f5: #f5f5f5;
+$red: #e53935;
+$red-btn: #f44336;
+$green: #43a047;
+$blue: #1e88e5;
+
+
+// Details
+$padding: 40px;
+
+$cursor: pointer;
+$cursor-not-active: auto;
+
+$transition-duration: .25s;
+
+
+
+// Layout
+@mixin padding-page-top() {
+    padding-top: 63px;
+}
+
+@mixin padding-horizontal() {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin padding-vertical($top: 120px, $bottom: 90px) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin flex() {
+    display: flex;
+}
+
+@mixin flex-justify-space-between($direction: row) {
+    @include flex();
+    justify-content: space-between;
+    flex-direction: $direction;
+}
+
+@mixin flex-justify-center($direction: column) {
+    @include flex();
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin flex-basis-height($size) {
+    flex-basis: $size;
+    height: $size;
+}
+
+
+
+// Slider
+@mixin slider($url) {
+    position: relative;
+    height: 800px;
+    background: center / cover no-repeat border-box;
+    background-image: url($url);
+    @include padding-horizontal();
+}
+
+
+
+// Titles
+@mixin h1-page-title($font: 62px, $weight: 200) {
+    color: $color_21;
+    font-size: $font;
+    font-weight: $weight;
+}
+
+@mixin h2-product-title($font: 36px) {
+    font-size: $font;
+    font-weight: 700;
+    color: $color_21;
+}
+
+@mixin promo-title($color) {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $color;
+}
+
+@mixin footer-titles() {
+    @include promo-title($color_6c);
+    margin-bottom: 20px;
+}
+
+
+
+// Links
+@mixin link-arrow() {
+    font-family: 'Font Awesome\ 5 Free';
+    content: '\f054';
+    position: absolute;
+}
+
+@mixin hover-effect-underline() {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: $color_21;
+}
+
+
+
+// Text
+@mixin product-description() {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color_6c;
+}
+
+@mixin product-category($font) {
+    position: relative;
+    font-size: $font;
+    color: $color_6c;
+    font-weight: 500;
+    text-decoration: none;
+    transition: $transition-duration;
+
+    &:hover {
+        color: $color_21;
+    }
+
+    &:hover::after {
+        @include hover-effect-underline();
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+    }
+
+    &.product-category-active {
+        font-weight: 700;
+        color: $color_21;
+
+        &:hover {
+            cursor: $cursor-not-active;
+            
+            &:after {
+                width: 0; 
+            }
+        }
+    }
+}
+
+@mixin footer-text() {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $color_21;
+    margin-bottom: 20px;
+}
+
+@mixin footer-links($font) {
+    font-size: $font;
+    font-weight: 700;
+    color: $color_21;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $transition-duration;
+
+    &:hover {
+        color: $color_8c;
+    }
+}
+
+
+
+// Menu
+@mixin menu-links() {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    transition: $transition-duration;
+}
+
+@mixin menu-items() {
+    @include menu-links();
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color_8c;
+
+    &:hover {
+        color: $color_21;
+    }
+
+    &:hover::after {
+        @include hover-effect-underline();
+        bottom: 0;
+        left: -1px;
+        width: calc(100% + 2px);
+    }
+}
+
+
+
+// Buttons $ forms
+@mixin btn-input {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
