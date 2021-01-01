@@ -138,7 +138,7 @@ body {
 .header-menu-cart::before {
   font-family: 'Font Awesome\ 5 Free';
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   font-weight: 700;
 }
@@ -819,6 +819,7 @@ body {
 }
 
 .featured-product-hover-link {
+  display: block;
   width: 48px;
   height: 48px;
   margin-bottom: 19px;
