@@ -1,8 +1,5 @@
 .up-btn {
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    outline: none;
+    @include btn-input;
 
     position: fixed;
     right: 40px;
@@ -10,7 +7,6 @@
     z-index: 99;
     display: none;
 
-    border-top: none;
     border-left: 17px solid transparent;
     border-right: 17px solid transparent;
     border-bottom: 25px solid $color_21;

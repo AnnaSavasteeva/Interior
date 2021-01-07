@@ -20,17 +20,20 @@
 
         <!-- Header -->
         <header class="header-container">
+
             <div class="header-logo-menu-container">
+                <button id="btn-open-menu" class="btn-open-menu" title="open menu">&#9776;</button>
                 <a href="index.html"><img src="img/logo.svg" alt="logo" class="logo"></a>
-                <nav>
+                <nav id="header-menu" class="header-menu">
                     <ul class="header-menu-list">
                         <li><a href="index.html" class="header-menu-link">HOME</a></li>
                         <li><a href="#" class="header-menu-link header-menu-link-active">PRODUCTS</a></li>
                         <li><a href="contact.html" class="header-menu-link">CONTACT</a></li>
                         <li><a href="#" class="header-menu-login">Sign in</a></li>
-                        <li><a href="#" class="header-menu-cart">(0)</a></li>
                     </ul>
+                    <button id="btn-close-menu" class="btn-close-menu" title="close menu">&#xD7;</button>
                 </nav>
+                <a href="#" class="shopping-cart">(0)</a>
             </div>
 
             <h1 class="page-title">Our Products Range</h1>
@@ -201,7 +204,10 @@
 
     </div>
 
+
+    <script src="scripts/open-close-menu.js"></script>
     <script src="scripts/btn-to-top.js"></script>
+
 </body>
 
 </html>

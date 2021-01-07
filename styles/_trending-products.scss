@@ -1,6 +1,6 @@
 .trending-products-container {
     @include padding-horizontal();
-    @include padding-vertical();
+    @include padding-vertical(80px, 65px);
 
     @media (max-width: 1070px) {
         padding-left: 0;

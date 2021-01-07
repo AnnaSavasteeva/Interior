@@ -6,13 +6,6 @@ window.onscroll = function () {
     } else {
         upButton.classList.remove("up-btn-show");
     }
-
-    // if (window.pageYOffset >= 560) {
-    //     upButton.classList.add("up-btn-show");
-    // } else {
-    //     upButton.classList.remove("up-btn-show");
-    // }
-
 };
 
 upButton.onclick = function () {

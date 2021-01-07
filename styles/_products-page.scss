@@ -1,6 +1,6 @@
 .products-catalog-container {
     @include padding-horizontal();
-    @include padding-vertical(70px, 90px);
+    @include padding-vertical(80px, 50px);
 
     @media (max-width: 1070px) {
         padding-left: 0;
