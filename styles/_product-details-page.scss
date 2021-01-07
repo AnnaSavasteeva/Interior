@@ -1,6 +1,6 @@
 .product-details-container {
     @include padding-horizontal();
-    @include padding-vertical(70px, 120px);
+    @include padding-vertical();
     @include flex-justify-space-between();
     align-items: flex-start;
 }

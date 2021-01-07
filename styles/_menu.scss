@@ -1,10 +1,84 @@
+.header-menu {
+    @media (max-width: 725px) {
+        order: -1;
+        position: absolute;
+        top: -5px;
+        left: -200%;
+        z-index: 100;
+
+        width: calc(100% + 40px);
+        padding: 60px 25px 25px 80px;
+        background-color: #fff;
+        border: 5px solid $color_21;
+        border-left: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: $transition-duration;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 38px;
+            bottom: 0;
+            width: 4px;
+            height: 100%;
+            background-color: $color_21;
+        }
+
+        &::before {
+            $logo_width: 100px;
+            content: '';
+            position: absolute;
+            top: 20px;
+            // Logo in the center: 80px — padding-left, 25px — padding-right
+            left: calc((100% - 80px - 25px) / 2 + 80px - #{$logo_width / 2});
+
+            width: $logo_width;
+            height: 16px;
+            background: url(../img/logo.svg) center / 100px no-repeat;
+
+            @media (max-width: 450px) {
+                left: 80px;
+            }
+        }
+
+        &.open-menu {
+            left: -40px;
+        }
+    }
+}
+
 .header-menu-list > li {
     display: inline-block;
     list-style-type: none;
+    position: relative;
+
+    @media (max-width: 725px) {
+        display: block;
+        margin-bottom: 30px;
+
+        &::after {
+            @include hover-effect-underline();
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+            &::after {
+                height: 0;
+            }
+        }
+    }
 }
 
 .header-menu-link {
     @include menu-items();
+
+    @media (max-width: 725px) {
+        padding: 0 0 5px;
+    }
 }
 
 .header-menu-link-active {
@@ -21,7 +95,7 @@
 }
 
 .header-menu-login,
-.header-menu-cart {
+.shopping-cart {
     @include menu-links();
     font-weight: 400;
     color: $color_21;
@@ -46,13 +120,61 @@
     &::before {
         content: '\f007';
     }
+
+    @media (max-width: 725px) {
+        margin-left: 0;
+    }
 }
 
-.header-menu-cart {
+.shopping-cart {
     padding-left: 25px;
-    margin-left: 20px;
 
     &::before {
         content: '\f07a';
+
+        @media (max-width: 725px) {
+            top: 3px;
+            padding-bottom: 3px;
+        }
+    }
+
+    @media (min-width: 726px) {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.btn-open-menu {
+    @include btn-input;
+    font-size: 30px;
+    line-height: 30px;
+    color: $color_21;
+
+    &:hover {
+        cursor: $cursor;
+        color: $color_6c;
+    }
+
+    @media (min-width: 726px) {
+        display: none;
+    }
+}
+
+.btn-close-menu {
+    @include btn-input;
+    position: absolute;
+    top: 9px;
+    right: 25px;
+    font-size: 35px;
+    line-height: 35px;
+    color: $color_6c;
+    
+    &:hover {
+        cursor: $cursor;
+        color: $color_21;
+    }
+
+    @media (min-width: 725px) {
+        display: none;
     }
 }

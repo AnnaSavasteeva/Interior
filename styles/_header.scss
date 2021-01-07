@@ -18,6 +18,21 @@
 .header-logo-menu-container {
     @include flex-justify-space-between();
     align-items: center;
+    position: relative;
+    padding-right: 63px;
+
+    @media (max-width: 725px) {
+        padding-right: 0;
+    }
+}
+
+
+
+// Logo
+.logo {
+    @media (max-width: 870px) {
+        width: 130px;
+    }
 }
 
 

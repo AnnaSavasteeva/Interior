@@ -1,5 +1,5 @@
 .contacts-container {
-    @include padding-vertical(70px, 100px);
+    @include padding-vertical(80px, 60px);
     @include flex-center();
     flex-wrap: wrap;
 

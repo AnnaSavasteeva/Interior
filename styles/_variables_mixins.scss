@@ -23,7 +23,7 @@ $transition-duration: .25s;
 
 // Layout
 @mixin padding-page-top() {
-    padding-top: 63px;
+    padding-top: 50px;
 }
 
 @mixin padding-horizontal() {
@@ -31,7 +31,7 @@ $transition-duration: .25s;
     padding-right: $padding;
 }
 
-@mixin padding-vertical($top: 120px, $bottom: 90px) {
+@mixin padding-vertical($top: 80px, $bottom: 80px) {
     padding-top: $top;
     padding-bottom: $bottom;
 }
@@ -243,15 +243,21 @@ $transition-duration: .25s;
     text-transform: uppercase;
     color: $color_8c;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         color: $color_21;
     }
 
-    &:hover::after {
-        @include hover-effect-underline();
-        bottom: 0;
-        left: -1px;
-        width: calc(100% + 2px);
+    @media (min-width: 726px) {
+        &:hover::after,
+        &:active:after,
+        &:focus::after {
+            @include hover-effect-underline();
+            bottom: 0;
+            left: -1px;
+            width: calc(100% + 2px);
+        }
     }
 }
 

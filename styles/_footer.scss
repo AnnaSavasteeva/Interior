@@ -1,6 +1,6 @@
 .footer-container {
     @include padding-horizontal();
-    @include padding-vertical(120px, 30px);
+    @include padding-vertical(80px, 30px);
     background-color: $color_f7;
 }
 

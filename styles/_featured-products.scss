@@ -1,6 +1,6 @@
 .featured-products-container {
     @include padding-horizontal();
-    @include padding-vertical(112px, 120px);
+    @include padding-vertical();
 
     @media (max-width: 960px) {
         padding-left: 0;
