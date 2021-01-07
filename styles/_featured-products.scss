@@ -1,12 +1,20 @@
 .featured-products-container {
-    min-height: 609px;
     @include padding-horizontal();
     @include padding-vertical(112px, 120px);
+
+    @media (max-width: 960px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .featured-products {
     @include flex-justify-space-between();
     flex-wrap: wrap;
+
+    @media (max-width: 1200px) {
+        @include flex-center();
+    }
 }
 
 .featured-product {
@@ -14,11 +22,25 @@
     @include flex-basis-height(270px);
     @include flex-justify-center(row);
     cursor: $cursor;
+
+    @media (max-width: 1200px) {
+        margin: 10px;
+    }
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        @include flex-basis-height(200px);
+    }
 }
 
 .featured-product-image {
-    flex-basis: 270px;
+    @include flex-basis-height(270px);
     margin: auto;
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        @include flex-basis-height(200px);
+    }
 }
 
 .featured-product-hover {
@@ -34,6 +56,12 @@
     @include flex-justify-center();
     align-items: center;
     display: none;
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .featured-product:hover .featured-product-hover {

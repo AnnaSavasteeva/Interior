@@ -1,19 +1,38 @@
 .contacts-container {
-    @include padding-horizontal();
-    @include padding-vertical(70px, 120px);
-    @include flex-justify-space-between();
+    @include padding-vertical(70px, 100px);
+    @include flex-center();
     flex-wrap: wrap;
-    align-items: center;
+
+    @media (min-width: 1220px) {
+        @include padding-horizontal();
+        @include flex-justify-space-between();
+    }
 }
 
 .contact-item-container {
-    flex-basis: 370px;
-    min-height: 370px;
-    padding: 45px;
+    flex-basis: 300px;
+    min-height: 300px;
+    margin: 0 10px 20px;
+    padding: 25px;
+
     border: 1px solid $color_9c;
     background-color: rgba(255, 255, 255, .9);
+
     font-style: normal;
     text-align: center;
+
+    @media (min-width: 1220px) {
+        flex-basis: 370px;
+        min-height: 370px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 45px;
+    }
+
+    @media (min-width: 620px) and (max-width: 1020px) {
+        flex-basis: 250px;
+        min-height: 250px;
+    }
 }
 
 .contact-nav-icon {
