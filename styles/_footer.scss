@@ -12,11 +12,35 @@
 
 .footer-contacts-info-container {
     align-items: flex-start;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
+
+    @media (max-width: 625px) {
+        flex-direction: column;
+    }
+}
+
+.footer-contacts-info-blocks {
+    @media (max-width: 955px) {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .footer-copy-socials-container {
     align-items: center;
+
+    @media (max-width: 1020px) {
+        @include flex-justify-center();
+    }
+}
+
+.footer-copy-socials-blocks {
+    @media (max-width: 1020px) {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -24,6 +48,10 @@
 // Address
 .footer-address-container {
     flex-basis: 225px;
+
+    @media (max-width: 715px) {
+        flex-basis: auto;
+    }
 }
 
 .footer-address-title {
@@ -39,7 +67,17 @@
 
 // Useful info
 .footer-useful-info-container {
-    flex-basis: 422px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    @media (max-width: 955px) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @media (max-width: 715px) {
+        order: -1;
+    }
 }
 
 .footer-useful-info-title {
@@ -49,12 +87,24 @@
 
 .footer-useful-info-links-container {
     @include flex-justify-space-between();
+    margin-top: 15px;
+
+    @media
+        (min-width: 955px) and (max-width: 1080px),
+        (min-width: 625px) and (max-width: 715px) {
+            flex-direction: column;
+        }
 }
 
 .footer-useful-info-links {
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .footer-useful-info-link {
@@ -71,7 +121,11 @@
 
 // Subscribe
 .footer-subscription-container {
- flex-basis: 370px;
+    flex-basis: 320px;
+
+    @media (max-width: 715px) {
+        flex-basis: auto;
+    }
 }
 
 .footer-subscription-title {
@@ -85,6 +139,7 @@
 .footer-subscription-input-container {
     position: relative;
     width: 100%;
+    margin-top: 15px;
 }
 
 .footer-subscription-input {
@@ -133,10 +188,18 @@
 .footer-copyright {
     color: $color_6c;
     font-size: 12px;
-    line-height: 26px;
+    line-height: 20px;
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+    
+    @media (max-width: 1020px) {
+        order: 1;
+    }
+
+    @media (max-width: 450px) {
+        text-align: center;
+    }
 }
 
 
@@ -155,8 +218,18 @@
 
 
 // Terms & privacy
+.footer-terms-privacy {
+    @media (max-width: 450px) {
+        text-align: center;
+    }
+}
+
 .footer-terms-privacy-link {
     @include footer-links(12px);
-    line-height: 26px;
+    line-height: 20px;
     letter-spacing: 0.6px;
+
+    @media (max-width: 450px) {
+        text-align: center;
+    }
 }

@@ -40,16 +40,29 @@ $transition-duration: .25s;
     display: flex;
 }
 
+@mixin flex-justify-content($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
 @mixin flex-justify-space-between($direction: row) {
-    @include flex();
-    justify-content: space-between;
+    @include flex-justify-content(space-between);
+    flex-direction: $direction;
+}
+
+@mixin flex-justify-space-around($direction: row) {
+    @include flex-justify-content(space-around);
     flex-direction: $direction;
 }
 
 @mixin flex-justify-center($direction: column) {
-    @include flex();
-    justify-content: center;
+    @include flex-justify-content(center);
     flex-direction: $direction;
+}
+
+@mixin flex-center($direction: row) {
+    @include flex-justify-center($direction);
+    align-items: center;
 }
 
 @mixin flex-basis-height($size) {
@@ -59,13 +72,51 @@ $transition-duration: .25s;
 
 
 
+// Products
+@mixin product-item() {
+    @include flex-basis-height(290px);
+    margin: 0 15px 30px;
+
+    @media (min-width: 1220px) {
+        @include flex-basis-height(370px);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @media (min-width: 690px) and (max-width: 1070px) {
+        @include flex-basis-height(200px);
+    }
+
+    @media (min-width: 540px) and (max-width: 690px) {
+        @include flex-basis-height(150px);
+    }
+
+    @media (min-width: 500px) and (max-width: 540px) {
+        @include flex-basis-height(220px);
+    }
+}
+
+
+
 // Slider
 @mixin slider($url) {
     position: relative;
     height: 800px;
-    background: center / cover no-repeat border-box;
+    background: center right / cover no-repeat border-box;
     background-image: url($url);
     @include padding-horizontal();
+
+    @media (max-width: 1030px) {
+        height: 700px;
+    }
+
+    @media (max-width: 950px) {
+        height: 600px;
+    }
+
+    @media (max-width: 870px) {
+        height: 500px;
+    }
 }
 
 
@@ -93,7 +144,7 @@ $transition-duration: .25s;
 
 @mixin footer-titles() {
     @include promo-title($color_6c);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 
@@ -160,7 +211,6 @@ $transition-duration: .25s;
     line-height: 22px;
     font-weight: 400;
     color: $color_21;
-    margin-bottom: 20px;
 }
 
 @mixin footer-links($font) {

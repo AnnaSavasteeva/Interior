@@ -16,4 +16,12 @@
         top: 2px;
         right: 0;
     }
+
+    @media (max-width: 950px) {
+        padding-right: 0;
+
+        &:hover::after {
+            right: -30px;
+        }
+    }
 }

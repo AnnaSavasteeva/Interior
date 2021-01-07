@@ -1,20 +1,57 @@
 .slider-in-header {
     @include slider('../img/slider/slider-img.jpg');
     @include padding-page-top();
+    @include flex-justify-space-between(column);
+    padding-bottom: 20px;
 }
 
-.slider-in-main-content {
+.slider-on-page {
     @include slider('../img/slider/slider.jpg');
     @include flex-justify-center();
+
+    @media (max-width: 800px) {
+        padding-top: 40px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 615px) {
+        align-items: center;
+    }
+}
+
+.slider-content {
+    @media (max-width: 800px) {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .5);
+    }
+}
+
+.slider-in-header-content {
+    @media (max-width: 800px) {
+        align-self: flex-start;
+    }
+
+    @media (max-width: 530px) {
+        align-self: center;
+    }
 }
 
 .slider-pagination-container {
-    position: absolute;
-    bottom: 19px;
-    width: calc(100% - #{$padding * 2});
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.slider-in-header-pagination-container {
+    margin-top: 15px;
+}
+
+.slider-on-page-pagination-container {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - #{$padding * 2});
 }
 
 .slider-pagination-item {
@@ -24,7 +61,7 @@
     margin: 0 5px;
     border-radius: 50%;
     background-color: $color_21;
-    opacity: 0.2;
+    opacity: 0.6;
     cursor: $cursor;
 
     &:hover {
@@ -44,9 +81,13 @@
 // Titles
 .slider-in-header-promo-title {
     @include promo-title($green);
+
+    @media (max-width: 1030px) {
+        font-size: 15px;
+    }
 }
 
-.slider-in-main-content-promo-title {
+.slider-on-page-promo-title {
     @include promo-title($red);
 }
 
@@ -55,12 +96,29 @@
     font-weight: 200;
     text-transform: uppercase;
     margin-bottom: 14px;
+
+    @media (max-width: 1030px) {
+        font-size: 35px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    @media (max-width: 870px) {
+        font-size: 30px;
+    }
 }
 
 
 // Text
 .slider-product-description {
     @include product-description();
-    max-width: 468px;
+    max-width: 350px;
     margin-bottom: 30px;
+}
+
+.slider-in-header-product-description {
+    @media (max-width: 1030px) {
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
 }

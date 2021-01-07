@@ -30,6 +30,18 @@
 .main-page-title {
     @include h1-page-title(45px, 700);
     text-transform: uppercase;
-    margin-bottom: 165px;
     margin-top: 20px;
+
+    @media (max-width: 1030px) {
+        font-size: 33px;
+    }
+
+    @media (max-width: 870px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 780px) {
+        margin-top: 0;
+        font-size: 0;
+    }
 }

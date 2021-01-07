@@ -1,6 +1,11 @@
 .trending-products-container {
     @include padding-horizontal();
     @include padding-vertical();
+
+    @media (max-width: 1070px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 // Text
@@ -8,21 +13,33 @@
     @include flex-justify-space-between();
     align-items: center;
     margin-bottom: 50px;
+
+    @media (max-width: 1220px) {
+        @include flex-center(column);
+    }
 }
 
 .trending-products-title {
     @include h2-product-title();
+
+    @media (max-width: 1220px) {
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
 // Products
 .trending-products-items-container {
     @include flex-justify-space-between();
     flex-wrap: wrap;
+
+    @media (max-width: 1220px) {
+        @include flex-center();
+    }
 }
 
 .trending-products-item {
-    @include flex-basis-height(370px);
-    margin-bottom: 30px;
+    @include product-item();
 }
 
 .trending-product-image {
