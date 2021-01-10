@@ -26,9 +26,9 @@ $transition-duration: .25s;
     padding-top: 50px;
 }
 
-@mixin padding-horizontal() {
-    padding-left: $padding;
-    padding-right: $padding;
+@mixin padding-horizontal($left: $padding, $right: $padding) {
+    padding-left: $left;
+    padding-right: $right;
 }
 
 @mixin padding-vertical($top: 80px, $bottom: 80px) {
@@ -98,6 +98,15 @@ $transition-duration: .25s;
 
 
 
+// Text on a translucent background
+@mixin translucent-background {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+
+
 // Slider
 @mixin slider($url) {
     position: relative;
@@ -117,6 +126,11 @@ $transition-duration: .25s;
     @media (max-width: 870px) {
         height: 500px;
     }
+
+    @media (max-width: 400px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 
@@ -126,12 +140,26 @@ $transition-duration: .25s;
     color: $color_21;
     font-size: $font;
     font-weight: $weight;
+
+    @media (max-width: 1030px) {
+        font-size: 33px;
+    }
+
+    @media (max-width: 870px) {
+        font-size: 25px;
+    }
 }
 
 @mixin h2-product-title($font: 36px) {
     font-size: $font;
     font-weight: 700;
     color: $color_21;
+    margin-bottom: 12px;
+}
+
+@mixin h2-product-title-smaller() {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 @mixin promo-title($color) {
@@ -140,6 +168,11 @@ $transition-duration: .25s;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     color: $color;
+}
+
+@mixin promo-title-smaller() {
+    font-size: 15px;
+    line-height: 25px;
 }
 
 @mixin footer-titles() {
@@ -168,9 +201,15 @@ $transition-duration: .25s;
 // Text
 @mixin product-description() {
     font-size: 14px;
-    font-weight: 400;
     line-height: 24px;
+    font-weight: 400;
     color: $color_6c;
+    margin-bottom: 30px;
+}
+
+@mixin product-description-smaller() {
+    line-height: 22px;
+    margin-bottom: 20px;
 }
 
 @mixin product-category($font) {
