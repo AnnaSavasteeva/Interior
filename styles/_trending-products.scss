@@ -21,9 +21,10 @@
 
 .trending-products-title {
     @include h2-product-title();
+    margin-bottom: 0;
 
     @media (max-width: 1220px) {
-        margin-bottom: 20px;
+        margin: 0 15px 20px;
         text-align: center;
     }
 }

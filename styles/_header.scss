@@ -43,6 +43,10 @@
 
 
 // Logo
+.logo-link {
+    display: flex;
+}
+
 .logo {
     @media (max-width: 870px) {
         width: 130px;
@@ -63,7 +67,7 @@
         margin-top: 40px;
     }
 
-    @media (max-width: 725px) {
+    @media (min-width: 300px) and (max-width: 725px) {
         text-align: center;
         // Center the title relative to the logo: logo isn't centered,
         // it is positioned via space-between. So it's position depends on the width

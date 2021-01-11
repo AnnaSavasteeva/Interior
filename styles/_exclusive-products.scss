@@ -89,6 +89,19 @@
         @include padding-horizontal(0, 0);
     }
 
+    @media (max-width: 850px) {
+        position: relative;
+
+        &::before {
+            content: 'Exclusive';
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+            @include promo-title($color_21);
+            font-size: 10px;
+        }
+    }
+
     @media (max-width: 395px) {
         flex-basis: 320px;
     }
