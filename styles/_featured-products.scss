@@ -2,9 +2,12 @@
     @include padding-horizontal();
     @include padding-vertical();
 
+    @media (max-width: 1200px) {
+        padding-bottom: 60px;
+    }
+
     @media (max-width: 960px) {
-        padding-left: 0;
-        padding-right: 0;
+        @include padding-horizontal(0, 0);
     }
 }
 
@@ -24,7 +27,7 @@
     cursor: $cursor;
 
     @media (max-width: 1200px) {
-        margin: 10px;
+        margin: 0 10px 20px;
     }
 
     @media (min-width: 690px) and (max-width: 1200px),

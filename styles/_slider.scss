@@ -82,7 +82,7 @@
 .slider-in-header-promo-title {
     @include promo-title($green);
 
-    @media (max-width: 1030px) {
+    @media (max-width: 1279px) {
         @include promo-title-smaller();
     }
 }
@@ -100,19 +100,19 @@
     font-weight: 200;
     text-transform: uppercase;
 
-    @media (max-width: 870px) {
+    @media (max-width: 945px) {
         @include h2-product-title-smaller();
     }
 }
 
 .slider-in-header-product-title {
-    @media (min-width: 871px) and (max-width: 1030px) {
+    @media (min-width: 945px) and (max-width: 1270px) {
         font-size: 36px;
     }
 }
 
 .slider-on-page-product-title {
-    @media (min-width: 871px) and (max-width: 1030px) {
+    @media (min-width: 945px) and (max-width: 1270px) {
         font-size: 50px;
     }
 }

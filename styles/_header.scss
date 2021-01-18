@@ -5,8 +5,7 @@
     @include padding-page-top();
 
     @media (max-width: 400px) {
-        padding-left: 25px;
-        padding-right: 25px;
+        @include padding-horizontal(25px, 25px);
     }
 }
 
@@ -67,7 +66,7 @@
         margin-top: 40px;
     }
 
-    @media (min-width: 300px) and (max-width: 725px) {
+    @media (min-width: 320px) and (max-width: 725px) {
         text-align: center;
         // Center the title relative to the logo: logo isn't centered,
         // it is positioned via space-between. So it's position depends on the width
@@ -75,12 +74,12 @@
         // Other way logo is in the center of the area between this elements.
         // 15px — it's the difference in width of two elements.
         // padding-right — because the right element is bigger.
-        padding-right: 15px;
+        padding-right: 14px;
     }
 }
 
 .main-page-title {
-    @include h1-page-title(45px, 700);
+    @include h1-page-title(38px, 700);
     text-transform: uppercase;
     margin-top: 20px;
 

@@ -12,7 +12,6 @@
 
 .footer-contacts-info-container {
     align-items: flex-start;
-    margin-bottom: 50px;
 
     @media (max-width: 625px) {
         flex-direction: column;
@@ -20,13 +19,7 @@
 }
 
 .footer-contacts-info-blocks {
-    @media (max-width: 955px) {
-        margin-bottom: 50px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+    margin-bottom: 50px;
 }
 
 .footer-copy-socials-container {
@@ -49,7 +42,7 @@
 .footer-address-container {
     flex-basis: 225px;
 
-    @media (max-width: 715px) {
+    @media (max-width: 770px) {
         flex-basis: auto;
     }
 }
@@ -70,13 +63,18 @@
     margin-right: 50px;
     margin-left: 50px;
 
-    @media (max-width: 955px) {
-        margin-right: 0;
+    @media (max-width: 960px) {
         margin-left: 0;
+        margin-right: 0;
     }
 
-    @media (max-width: 715px) {
+    @media (max-width: 770px) {
         order: -1;
+        margin-right: 50px;
+    }
+
+    @media (max-width: 635px) {
+        margin-right: 0;
     }
 }
 
@@ -90,8 +88,8 @@
     margin-top: 15px;
 
     @media
-        (min-width: 955px) and (max-width: 1080px),
-        (min-width: 625px) and (max-width: 715px) {
+        (min-width: 960px) and (max-width: 1085px),
+        (min-width: 635px) and (max-width: 760px) {
             flex-direction: column;
         }
 }
@@ -105,6 +103,15 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @media
+        (min-width: 960px) and (max-width: 1085px),
+        (min-width: 635px) and (max-width: 760px) {
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 }
 
 .footer-useful-info-link {
