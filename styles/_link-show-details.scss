@@ -1,6 +1,7 @@
 .link-show-details {
     position: relative;
     display: inline-block;
+
     min-width: 212px;
     height: 45px;
     line-height: 45px; /* = высоте блока для вертикального центрирования */
@@ -8,6 +9,7 @@
     border-radius: 23px;
     background-color: #fff;
     box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+
     text-decoration: none;
     color: $color_21;
     font-size: 18px;
@@ -25,11 +27,16 @@
     &:active {
         box-shadow: none;
     }
-}
 
-.promo-product .link-show-details {
-    @media (max-width: 440px) {
-        position: absolute;
-        bottom: 95px;
+    @media (max-width: 360px) {
+        min-width: 150px;
+        height: 40px;
+        line-height: 40px; /* = высоте блока для вертикального центрирования */
+        padding: 0 30px;
+        font-size: 14px;
+
+        &:hover::after {
+            right: 13px;
+        }
     }
 }

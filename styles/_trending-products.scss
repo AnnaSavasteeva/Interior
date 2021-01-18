@@ -3,8 +3,7 @@
     @include padding-vertical(80px, 65px);
 
     @media (max-width: 1070px) {
-        padding-left: 0;
-        padding-right: 0;
+        @include padding-horizontal(0, 0);
     }
 }
 
@@ -41,8 +40,16 @@
 
 .trending-products-item {
     @include product-item();
+
+    @media (max-width: 315px) {
+        height: auto;
+    }
 }
 
 .trending-product-image {
     width: 100%;
+
+    @media (max-width: 315px) {
+        display: block;
+    }
 }

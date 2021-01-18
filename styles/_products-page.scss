@@ -3,8 +3,7 @@
     @include padding-vertical(80px, 50px);
 
     @media (max-width: 1070px) {
-        padding-left: 0;
-        padding-right: 0;
+        @include padding-horizontal(0, 0);
     }
 }
 

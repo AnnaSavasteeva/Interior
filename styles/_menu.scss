@@ -127,14 +127,11 @@
 }
 
 .shopping-cart {
-    padding-left: 25px;
+    padding-left: 23px;
 
     &::before {
         content: '\f07a';
-
-        @media (max-width: 725px) {
-            top: 1px;
-        }
+        top: 1.25px;
     }
 
     @media (min-width: 726px) {
