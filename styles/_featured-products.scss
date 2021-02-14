@@ -80,15 +80,34 @@
     border-radius: 50%;
     background: url(../img/arrow.svg) center / 12px no-repeat #ffffff;
     cursor: $cursor;
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 14px;
+    }
 }
 
 .featured-product-hover-title {
     @include h2-product-title(22px);
     margin-bottom: 12px;
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
 }
 
 .featured-product-hover-description {
     @include product-description();
     text-align: center;
     line-height: 22px;
+    margin-bottom: 0;
+
+    @media (min-width: 690px) and (max-width: 1200px),
+    (min-width: 440px) and (max-width: 590px) {
+        font-size: 12px;
+    }
 }
