@@ -47,7 +47,7 @@
 }
 
 .logo {
-    @media (max-width: 870px) {
+    @media (max-width: 935px) {
         width: 130px;
     }
 }
@@ -79,9 +79,17 @@
 }
 
 .main-page-title {
-    @include h1-page-title(38px, 700);
+    @include h1-page-title(33px, 700);
     text-transform: uppercase;
     margin-top: 20px;
+
+    @media (min-width: 1280px) {
+        font-size: 45px;
+    }
+
+    @media (max-width: 935px) {
+        font-size: 25px;
+    }
 
     @media (max-width: 780px) {
         margin-top: 0;

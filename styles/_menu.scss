@@ -105,7 +105,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        font-weight: 700;
+        font-weight: 700; // Important! Free icons have special font-weight!
     }
 
     &:hover::before {
