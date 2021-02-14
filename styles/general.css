@@ -2032,12 +2032,6 @@ body {
   margin-bottom: 30px;
 }
 
-.exclusive-product-small:hover {
-  outline-width: 1px;
-  outline-color: #9c9c9c;
-  outline-style: solid;
-}
-
 @media (min-width: 1235px) {
   .exclusive-product-small {
     -ms-flex-preferred-size: 270px;
@@ -2076,6 +2070,12 @@ body {
 .exclusive-product-small-image {
   display: block;
   width: 100%;
+}
+
+.exclusive-product-small-image:hover {
+  outline-width: 1px;
+  outline-color: #9c9c9c;
+  outline-style: solid;
 }
 
 .exclusive-product-promo-title {

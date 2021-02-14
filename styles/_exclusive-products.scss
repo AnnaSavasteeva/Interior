@@ -88,11 +88,6 @@
     @include padding-horizontal(15px, 15px);
     margin-bottom: 30px;
 
-    &:hover {
-        @include product-hover();
-        outline-style: solid;
-    }
-
     @media (min-width: 1235px) {
         @include flex-basis-height(270px);
         @include padding-horizontal(0, 0);
@@ -119,6 +114,11 @@
 .exclusive-product-small-image {
     display: block;
     width: 100%;
+
+    &:hover {
+        @include product-hover();
+        outline-style: solid;
+    }
 }
 
 
